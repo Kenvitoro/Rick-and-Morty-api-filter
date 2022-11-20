@@ -1,23 +1,54 @@
-*{
+@import url("./reset.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400&display=swap");
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --main-color:  #191A23;
-  --secondary-color: #2C2D3C;
-  --tags-bg-color: #292A35;
+:root {
+  --main-color: #191a23;
+  --secondary-color: #2c2d3c;
+  --tags-bg-color: #292a35;
   --Text-color: #eeeffc;
-  --Text-color-focus: #5256BD;
-  --Text-font-main: sans-serif; 
+  --Text-color-focus: #5256bd;
+  --Text-font-main: sans-serif;
 }
 
-body{
+.container {
+  max-width: 1440px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
   display: flex;
 }
 
-.tags-interface{
+.header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 6rem;
+  border-bottom: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+}
+
+.nav {
+  display: grid;
+  place-items: center start;
+  grid-template-columns: 1fr 1fr;
+  min-height: 6rem;
+}
+
+.nav-brand {
+  font-size: 2rem;
+}
+
+.tags-interface {
   background-color: var(--main-color);
   border-right: var(--secondary-color) 2px solid;
   font-family: var(--Text-font-main);
@@ -27,21 +58,22 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 6rem;
 }
 
-.tags-interface h2{
+.tags-interface h2 {
   padding: 20px 0px;
 }
 
-.tags{
+.tags {
   background-color: var(--main-color);
-height: 100%;
-  width: 220px; 
- padding-top: 80px;
- padding-left: 15px;
+  height: 100%;
+  width: 220px;
+  padding-top: 80px;
+  padding-left: 15px;
 }
 
-.tag{
+.tag {
   border: var(--tags-bg-color) solid 2px;
   color: var(--Text-color);
   font-family: var(--Text-font-main);
@@ -51,23 +83,52 @@ height: 100%;
   padding: 4px 6px;
   margin: 5px 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
 }
 
-.tag:hover{
+.tag:hover {
   background-color: var(--tags-bg-color);
   color: var(--Text-color-focus);
 }
 
-.searcher{
+.searcher {
   background-color: var(--main-color);
-  border-bottom: var(--tags-bg-color) solid 2px;;
+  border-bottom: var(--tags-bg-color) solid 2px;
   height: 60px;
   width: 100%;
 }
 
-.main{
+.main {
+  margin-top: 6rem;
   background-color: var(--main-color);
   width: 100%;
   min-height: 100%;
+}
+
+.cards {
+  padding: 4rem 0;
+}
+
+.card {
+  width: 640px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  color: var(--Text-color);
+}
+
+.card-name {
+  font-size: 1.4rem;
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px 0 0 10px;
+}
+
+.card-body {
+  padding: 1rem;
+  background: var(--secondary-color);
+  border-radius: 0 10px 10px 0;
 }
