@@ -29,10 +29,7 @@ body {
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 6rem;
+  width: 100%;
   border-bottom: 1px solid var(--secondary-color);
   background-color: var(--main-color);
 }
@@ -41,7 +38,7 @@ body {
   display: grid;
   place-items: center start;
   grid-template-columns: 1fr 1fr;
-  min-height: 6rem;
+  min-height: 4.5rem;
 }
 
 .nav-brand {
@@ -58,7 +55,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem;
 }
 
 .tags-interface h2 {
@@ -99,21 +95,17 @@ body {
 }
 
 .main {
-  margin-top: 6rem;
   background-color: var(--main-color);
   width: 100%;
   min-height: 100%;
 }
 
-<<<<<<< HEAD
-
-=======
 .cards {
   padding: 4rem 0;
 }
 
 .card {
-  width: 640px;
+  width: 600px;
   padding: 1rem;
   display: grid;
   grid-template-columns: 35% 65%;
@@ -135,4 +127,3 @@ body {
   background: var(--secondary-color);
   border-radius: 0 10px 10px 0;
 }
->>>>>>> 869fbe9e53e1efa16c05cf46e812a888b205aacb
