@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="src/style.css">
-    <title>Vite App</title>
-  </head>
-  <body>
-    
-    <aside class="tags-interface">
-      <h2>Filtros</h2>
-      <div class="tags">  
-        <div class="tag a-z">A-Z</div>
-        <div class="tag a-z">A-Zz</div>
-        <div class="tag a-z">A-Zzzz</div>
-        <div class="tag a-z">A-Zzz</div>
-        <div class="tag a-z">A-Z</div>
-        <div class="tag a-z">A-Z</div>
-        <div class="tag a-z">A-Z</div>
-        <div class="tag a-z">A-Z</div>
-        <div class="tag a-z">A-Z</div>
-        <div class="tag a-z">A-Z</div>
-        <div class="tag a-z">A-Z</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css">
+  <title>Vite App</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-brand">
+          <a href="#">Rick & Morty App</a>
+        </div>
+        <div class="nav-searcher">
+          <input type="text" name="" id="">
+        </div>
+      </nav>
+    </div>
+
+  </header>
+
+
+  <aside class="tags-interface">
+    <h2>Filtros</h2>
+    <div class="tags">
+      <div class="tag a-z">A-Z</div>
+      <div class="tag a-z">A-Zz</div>
+      <div class="tag a-z">A-Zzzz</div>
+      <div class="tag a-z">A-Zzz</div>
+      <div class="tag a-z">A-Z</div>
+      <div class="tag a-z">A-Z</div>
+      <div class="tag a-z">A-Z</div>
+      <div class="tag a-z">A-Z</div>
+      <div class="tag a-z">A-Z</div>
+      <div class="tag a-z">A-Z</div>
+      <div class="tag a-z">A-Z</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="cards">
+      <div class="container">
+        <div class="card">
+          <figure class="card-figure">
+            <img class="card-img" src="./src/assets/243.jpeg" alt="">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-name">Mr. Needful</h3>
+            <span class="card-status" data-status="live">Dead - Human</span>
+            <div class="card-last">
+              <span>Last known location:</span>
+              <p class="card-last-location">Earth (Replacement Dimension)</p>
+            </div>
+            <div class="card-first">
+              <span>First seen in:</span>
+              <p class="card-first-seen">Lawnmower Dog</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </aside>
-   
-    <main class="main">
-      <nav class="searcher"></nav>
-    </main>
+    </section>
+  </main>
 
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
