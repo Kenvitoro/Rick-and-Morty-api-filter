@@ -12,6 +12,8 @@
   --main-color: #191a23;
   --secondary-color: #2c2d3c;
   --tags-bg-color: #292a35;
+  --success-color: #a3e635;
+  --danger-color: #f87171;
   --Text-color: #eeeffc;
   --Text-color-focus: #5256bd;
   --Text-font-main: sans-serif;
@@ -118,29 +120,55 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  padding: 5rem 14rem 5rem 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+  gap: 2rem;
 } 
 
 .card {
-  width: 600px;
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: 35% 65%;
-  color: var(--Text-color);
+  display: flex;
 }
 
-.card-name {
-  font-size: 1.4rem;
-}
-
-.card-img {
-  width: 100%;
+.card-img{
+  width: 300px;
   aspect-ratio: 1 / 1;
-  border-radius: 10px 0 0 10px;
+  border-radius: 15px 0 0 15px;
 }
 
-.card-body {
-  padding: 1rem;
-  background: var(--secondary-color);
-  border-radius: 0 10px 10px 0;
+.card-body{
+  padding: .6rem 0 0 1rem;
+  width: 100%;
+  color: var(--Text-color);
+  background-color: var(--secondary-color);
+  border-radius: 0 15px 15px 0;
+}
+
+.card-status{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.card-status[data-live='Alive'] {
+  color: var(--success-color)
+}
+
+.card-status[data-live='Dead'] {
+  color: var(--danger-color)
+}
+
+.card-status[data-live='unknown'] {
+  color: var(--Text-color)
+}
+
+.card-last span,
+.card-first span{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-last{
+  margin-bottom: .5rem;
 }
