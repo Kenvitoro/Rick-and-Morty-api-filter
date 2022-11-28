@@ -44,3 +44,4 @@ xhr.addEventListener("readystatechange",()=>{
 xhr.open("GET","https://rickandmortyapi.com/api/character")
 
 xhr.send()
+
